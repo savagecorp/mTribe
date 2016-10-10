@@ -1,0 +1,16 @@
+<p>boom</p>
+
+
+
+<%= form_for @post, html: {class: "nifty_form"} do |f| %>
+	<%= f.label :description %><br/>
+  <%= f.text_field :description %> <br/>
+  <%= f.label :url %><br/>
+  <%= f.text_field :url %> <br/>
+  <%= f.label :why %><br/>
+  <%= f.text_area :why, size: "60x12" %> <br/>
+  <%= f.label :tags %><br/>
+  <%= f.text_field :tags %><br/>
+  <%= f.submit "submit" %>
+<% end %>
+

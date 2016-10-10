@@ -1,0 +1,17 @@
+<div class="header"><h1>Brooklyn Groups</h1>
+<%= link_to 'submit a group', new_post_path, class: 'button' %> </div>
+<br> <br>
+<div class="post_container">
+<% @posts.each do |post| %>
+	<div class="post cf">
+		<!-- <p class="post_title"><%= post.description %></p> -->
+		<div class="post_content">
+			<h2><%= post.description %></h2>
+			<p><%= link_to post.url, post.url, target: "_blank" %> <br>
+			<i><%= post.why %></i> <br> <br>
+			<span class="tags"><%= post.tags %> </span></p>
+		</div>
+		<%#= link_to 'edit', edit_post_path(post) %>
+	</div>
+<% end %>
+</div>
